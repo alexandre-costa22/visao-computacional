@@ -1,3 +1,5 @@
+Aluno: Alexandre Elias Cordeiro Bichara da Costa
+
 ## Velocímetro com OpenCV
 
 Este projeto utiliza a biblioteca OpenCV para detectar objetos em movimento e calcular sua velocidade em km/h usando uma webcam. O código detecta o objeto mais próximo da câmera, calcula a distância percorrida em pixels e converte isso em uma estimativa de velocidade.

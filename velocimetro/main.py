@@ -18,14 +18,6 @@ def main():
         print("Não foi possível abrir a webcam.")
         return
     
-    captura_de_video.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    captura_de_video.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-    
-    ret, frame = captura_de_video.read()
-    if not ret:
-        print("Não foi possível receber o frame inicial da webcam.")
-        return
-    
     referencia = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     referencia = cv2.GaussianBlur(referencia, (21, 21), 0)
     
@@ -68,8 +60,6 @@ def main():
     
             cv2.imshow('Detecção de Movimento e Velocidade', frame)
     
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
     finally:
         captura_de_video.release()
         cv2.destroyAllWindows()
