@@ -20,7 +20,6 @@ def main():
     
     referencia = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     referencia = cv2.GaussianBlur(referencia, (21, 21), 0)
-    
     try:
         while True:
             ret, frame = captura_de_video.read()
